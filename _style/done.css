@@ -94,42 +94,23 @@
     margin-top: 20px;
   }
 
-  /*Relógio*/
-.clock {
+  .concluido{
     display: flex;
     flex-direction: column;
     position: absolute;
-    margin-left: 900px;
-    
-
-    font-family: Arial, sans-serif;
-    font-size: 26px;
-    text-align: center;
-
-    background-color: var(--sidebar);
-    color: var(--branco);
-    border: 5px solid #f7f7f7;
+    margin-left: 250px;
+    top: 100px;
+    background-color: var(--branco);
+    width: 980px;
+    height: 80vh;
     border-radius: 5px;
-    padding: 4px 12px;
+  
+  
   }
   
-.importante{
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  margin-left: 750px;
-  top: 120px;
-  background-color: var(--branco);
-  width: 350px;
-  height: 80vh;
-  border-radius: 5px;
-
-
-}
-
-.importante h3{
-  color: #03114f;
-  margin-left: 70px;
-  margin-top: 10px;
-  font-family: 'arial';
-}
+  .concluido h3{
+    color: #03114f;
+    margin-left: 70px;
+    margin-top: 10px;
+    font-family: 'arial';
+  }
