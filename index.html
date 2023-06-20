@@ -5,34 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> <!--Criar nome-->
     <link rel="stylesheet" type="text/css" media="screen" href="_style/main.css">
-</head>
-<header class="container">
-    <div>
-        <h1 class="logo">To-do List</h1>
-    </div>
-    <div class="sidebar">
-       
-            <a href="#">Criar Tarefa +</a>
-            <h3>Tarefas</h3>
-            <a href="#">Hoje</a>
-            <a href="#">Importante</a>
-            <a href="#">Planejado</a>
-            <a href="#">Concluído</a>
-            <h3>Categoria</h3>
-            <a href="#">Mercado</a>
-            <a href="#">Saúde</a>
-            <a href="#">Estudo</a>
-            <a href="#">Pessoal</a>
-    </div>
-
-</header>
-<body>
-    <div class="sessoes">
-        <section class="sessao">Sessao1</section>
-        <section class="sessao">Sessao2</section>
-        <section class="sessao">Sessao3</section>
-
-    </div>
     
+</head>
+
+<body>
+    <header class="container">
+        <div>
+            <h1 class="logo">To - do List</h1>
+        </div>
+        <div class="sidebar">
+            <ul>
+                
+                <li><a href="newTask.html" class="menu">Nova Tarefa +</a></li>
+                <li><h3>Tarefas</h3></li>
+                <li><a href="" class="menu">Hoje</a></li>
+                <li><a href="#" class="menu">Importante</a></li>
+                <li><a href="#" class="menu">Planejado</a></li>
+                <li><a href="#" class="menu">Concluído</a></li>
+            </ul>
+        </div>
+    
+    </header>
+    <div class="sessoes">
+        <div class="divisao">
+            <h2>Bem-vindo</h2>
+            <a href="newTask.html" class="menu">Nova Tarefa</a>
+            <a href="#" class="menu">Ver Tarefas Planejadas</a>
+            <a href="#" class="menu">Calendário de Tarefas</a>
+        </div>
+        <!-- Código para o Relógio -->
+        <div class="clock" id="clock"></div>
+            
+        <!-- Código para o calendário -->
+        <div class="calendario">
+            <div class="header">
+                <button id="btnMesAnt">&lt;</button>
+                <h2 id="mesAno"></h2>
+                <button id="btnMesSeg">&gt;</button>
+            </div>
+            <table id="calendarTable">
+                <thead>
+                    <tr>
+                        <th>D</th>
+                        <th>S</th>
+                        <th>T</th>
+                        <th>Q</th>
+                        <th>Q</th>
+                        <th>S</th>
+                        <th>S</th>
+                    </tr>
+                </thead>
+                <tbody id="calendarBody"></tbody>
+            </table>
+        </div>
+            
+        </div>
+    </div>
+    <script src="_js/main.js"></script>
 </body>
 </html>

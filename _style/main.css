@@ -1,59 +1,194 @@
-:root{
+:root {
     --sidebar: #03114f;
     --branco: #ffff;
-}
-*{
+    --cinza: #1c1b1b00;
+  }
+  
+  * {
     margin: 0;
     padding: 0;
-}
-
-.container{
-    background-color: var(--sidebar);
+  }
+  
+  body {
+    background-image: url(/_img/background.png);
+    background-size: 220vh;
+    background-repeat: no-repeat;
+  }
+  
+/* Barra lateral */
+  .container {
     width: 200px;
-    height: 100vh;
+    height: 97.1vh;
     padding: 10px;
-    
-}
 
-.logo{
+    background-color: var(--sidebar); 
+  }
+  
+  .logo {
     margin-top: 20px;
     color: var(--branco);
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.sidebar{
+  }
+  
+  .sidebar {
+    background-color: var(--sidebar);
     color: var(--branco);
+    margin-top: 5px;
+   
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
     margin-top: 30px;
-    margin-left: 10px;
-}
-
-a{
-    display: flex;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a.menu {
+    display: block;
     color: var(--branco);
     padding: 10px;
     margin-left: 20px;
-
     text-decoration: none;
     cursor: pointer;
     transition: .3s ease all;
-}
-
-h3{
+  }
+  
+  h3 {
     padding: 10px;
-}
-
-body{
-    background-image: url(/_img/background.png);
-    background-size: 220vh;
-    background-repeat: no-repeat;  
-}
-
-.sessoes{
+  }
+  
+  /* Centro */
+  .sessoes {
     display: flex;
-}
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
 
-.sessao{
-    flex: 1;
-    padding: 20px;
-    background-color: #f1f1f1;
-}
+    box-sizing: border-box;
+    border-left: 1px solid transparent;
+
+
+    background-color: var(--branco);
+    width: 350px;
+    height: 50vh;
+    margin-left: 35vh;
+    margin-top: 15vh;
+    border-radius: 5%;
+  }
+  
+  .sessoes a.menu {
+    display: flex;
+    color: #03114f;
+    padding: 50px;
+    text-decoration: none;
+ 
+  }
+  h2{
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  /*Relógio*/
+.clock {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 800px;
+    
+
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    text-align: center;
+
+    background-color: black;
+    color: var(--branco);
+    border: 5px solid #f7f7f7;
+    border-radius: 5px;
+    padding: 4px 12px;
+  }
+
+  /*Calendario*/
+  .calendario {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-left: 800px;
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #03114f;
+    color: var(--branco);
+  }
+  
+  #btnMesAnt,
+  #btnMesSeg {
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: var(--branco);
+  }
+  
+  #mesAno {
+    margin: 0;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--branco);
+  }
+  
+  th,
+  td {
+    text-align: center;
+    padding: 15.8px;
+  }
+  
+  thead th {
+    background-color: #f0f0f0;
+  }
+  
+  #calendarBody td {
+    border: 1px solid #ccc;
+  }
+  
+  #calendarBody td:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Adicionar caixa em volta dos dias */
+  #calendarBody td {
+    position: relative;
+  }
+  
+  #calendarBody td:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    z-index: -1;
+  }
+  
+  
+  
