@@ -15,29 +15,25 @@
             <ul>
                 <li><a href="/index.html" class="menu">Home</a></li>
                 <li><a href="/_nav/newTask.html" class="menu">Nova Tarefa +</a></li>
-                <li><h3>Tarefas</h3></li>
-                <li><a href="/_nav/today.html" class="menu">Hoje</a></li>
-                <li><a href="/_nav/important.html" class="menu">Importante</a></li>
-                <li><a href="/_nav/plan.html" class="menu">Planejado</a></li>
-                <li><a href="/_nav/done.html" class="menu">Concluído</a></li>
-            </ul>
         </div>
     
     </header>
     
     <div class="newTask">
         
-        <input type="text" placeholder="Nome da Tarefa" class="taskName">
-        <input type="text" placeholder="Descrição da Tarefa" class="taskDescription">
-        <input type="date" class="taskDate">
-        <input type="checkbox" id="opcao1" name="opcao1" value="opcao1" class="opcao1">
-        <label for="opcao1">Importante</label>
-        <button class="btnCriar" onclick="Criar()">Criar</button>
+        <input type="text" id="taskName" placeholder="Nome da Tarefa" class="taskName">
+
+        <input type="date" id="date" class="taskDate">
+        <button id="btn" class="btnCriar" onclick="Criar()">Criar</button>
     </div>
 
     <div class="planejada">
         <h3>Tarefas Planejadas</h3>
+        <p id="list" class="list"></p>
+        
     </div>
     
+    <script src="/_js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </body>
 </html>
