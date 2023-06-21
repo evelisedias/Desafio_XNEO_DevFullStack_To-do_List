@@ -36,5 +36,4 @@ function updateCalendar(year, month){
 
     mesAtual.textContent = nomeMes[date.getMonth()] + '' + date.getFullYear();
 }
-  
-  
+
