@@ -17,47 +17,16 @@
   }
   
 /* Barra lateral */
-  .container {
-    width: 200px;
-    height: 97.1vh;
-    padding: 10px;
 
-    background-color: var(--sidebar); 
-  }
   
   .logo {
     margin-top: 20px;
-    color: var(--branco);
+    margin-left: 50px;
+    color: var(--sidebar);
     font-family: Arial, Helvetica, sans-serif;
   }
   
-  .sidebar {
-    background-color: var(--sidebar);
-    color: var(--branco);
-    margin-top: 5px;
-   
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 30px;
-  }
-  
-  .sidebar li {
-    margin-bottom: 10px;
-  }
-  
-  .sidebar a.menu {
-    display: block;
-    color: var(--branco);
-    padding: 10px;
-    margin-left: 20px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: .3s ease all;
-  }
-  
+
   h3 {
     padding: 10px;
   }
@@ -76,7 +45,7 @@
 
     background-color: var(--branco);
     width: 350px;
-    height: 30vh;
+    height: 20vh;
     margin-left: 35vh;
     margin-top: 15vh;
     border-radius: 5%;
