@@ -76,7 +76,7 @@
 
     background-color: var(--branco);
     width: 350px;
-    height: 50vh;
+    height: 30vh;
     margin-left: 35vh;
     margin-top: 15vh;
     border-radius: 5%;
@@ -113,7 +113,7 @@
     padding: 4px 12px;
   }
   
-.importante{
+.planejado{
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -127,7 +127,7 @@
 
 }
 
-.importante h3{
+.planejado h3{
   color: #03114f;
   margin-left: 70px;
   margin-top: 10px;
