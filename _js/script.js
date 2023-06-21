@@ -5,8 +5,8 @@ function Criar(){
     var data = document.getElementById("date").value;
 
     var tarefa = nome_tarefa + " " + data;
-
-    $.ajax({
+    console.log(tarefa);
+    /*$.ajax({
         url: 'insert.php',
         type: 'post',
         data: {txt: tarefa},
@@ -19,7 +19,7 @@ function Criar(){
                 console.log(result);
             }
         }
-    })
+    })*/
 
   }
   
