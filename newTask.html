@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Tarefa</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/Desafio_XNEO_DevFullStack_To-do_List/_style/newTask.css">
+</head>
+<body>
+    <header class="container">
+        <div>
+           <a href="/Desafio_XNEO_DevFullStack_To-do_List"><h1 class="logo">Home</h1></a>
+        </div>
+          
+    </header>
+    
+    <div class="newTask">
+        
+        <input type="text" id="taskName" placeholder="Nome da Tarefa" class="taskName">
+
+        <input type="date" id="date" class="taskDate">
+        <button id="btn" class="btnCriar" onclick="Criar()">Criar</button>
+    </div>
+
+    <div class="planejada">
+        <h3>Tarefas Planejadas</h3>
+        <ul id="list" class="list">
+            
+        </ul>
+    </div>
+    <div class="footer"></div>
+            <p id="total_task" class="total_task"></p>
+            <button id="clear" class="clear">Limpar</button>
+        
+    </div>
+
+     
+
+    
+    
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="/Desafio_XNEO_DevFullStack_To-do_List/_js/script.js"></script>
+</body>
+</html>
