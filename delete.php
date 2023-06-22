@@ -4,7 +4,7 @@
 
   $id = $_POST['id'];
 
-  $sql = "DELETE FROM demo WHERE id='$id'";
+  $sql = "DELETE FROM tasks WHERE id='$id'";
   $result = mysqli_query($conn, $sql);
 
   if ($result) {
