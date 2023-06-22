@@ -1,4 +1,5 @@
 //Mostrando as tarefas
+//Mostrando as tarefas
 function showData(){
     $.ajax({
         url: 'show.php',
@@ -48,61 +49,67 @@ function Criar(){
     })
 }
 
-$(document).on("click", "#delete", function(){
+$(document).on("click", "#delete", function(event){
+    event.preventDefault(); // Evita o comportamento padrão do link
     id = $(this).data("id");
     element = $(this);
 
     $.ajax({
-      url: 'delete.php',
-      type: 'post',
-      data: {id: id},
-      success: function(result) {
-        if (result == 1) {
-          $(element).closest("li").fadeOut();
-          showData();
-          totalTask();
-        } else {
-            console.log(result);
+        url: 'delete.php',
+        type: 'post',
+        data: {id: id},
+        success: function(result) {
+            if (result == 1) {
+                $(element).closest("li").fadeOut();
+                showData();
+                totalTask();
+            } else {
+                console.log(result);
+            }
         }
-      }
     });
-  });
+});
 
 
-  $(document).on("click", "#clear", function(){
+$(document).on("click", "#clear", function(event){
+    event.preventDefault(); // Evita o comportamento padrão do link
+
     $.ajax({
         url: 'clear.php',
         type: 'post',
-        success: function(result){
-            if(result == 1){
+        success: function(result) {
+            console.log(result);
+            if (result == 1) {
                 showData();
                 totalTask();
             }
         }
-    })
-})
+    });
+});
 
-$(document).ready(function(){
-    $(".edit").click(function(){
-        var taskid = $(this).data("id");
-        var taskTextElement = $(this).siblings("p");
-        var taskText = taskTextElement.text().trim();
 
-        var newTaskText = prompt("Digite o novo texto da tarefa:", taskText);
-        if(newTaskText !== null){
-            $.ajax({
-                url: 'edit.php',
-                type: 'post',
-                data: {id: taskid, txt: newTaskText},
-                success: function(result){
-                    console.log(result); // Adicione esta linha para depurar
-                    if (result === 'success'){
-                        alert('Tarefa atualizada com sucesso!');
-                        taskTextElement.text(newTaskText);
-                        showData(); // Atualiza a lista de tarefas
-                        totalTask();
-                    } else {
-                        alert('Erro ao atualizar a tarefa');
+$(document).on("click", ".edit", function(event){
+    event.preventDefault(); // Evita o comportamento padrão do link
+
+    var taskid = $(this).data("id");
+    var taskTextElement = $(this).siblings("p");
+    var taskText = taskTextElement.text().trim();
+
+    var newTaskText = prompt("Digite o novo texto da tarefa:", taskText);
+    if(newTaskText !== null){
+        $.ajax({
+            url: 'edit.php',
+            type: 'post',
+            data: {id: taskid, txt: newTaskText},
+            success: function(result){
+                console.log(result); // Adicione esta linha para depurar
+                if (result === 'success'){
+                    alert('Tarefa atualizada com sucesso!');
+                    taskTextElement.text(newTaskText);
+                    showData(); // Atualiza a lista de tarefas
+                    totalTask();
+                } else {
+                    alert('Erro ao atualizar a tarefa');
                     }
                 },
                 error: function(xhr, status, error){
@@ -111,4 +118,4 @@ $(document).ready(function(){
             });
         }
     });
-});
+
