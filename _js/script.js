@@ -28,7 +28,7 @@ function Criar(){
     var nome_tarefa = document.getElementById("taskName").value;
     var data = document.getElementById("date").value;
 
-    var tarefa = nome_tarefa + data;
+    var tarefa = nome_tarefa + " " + data;
     console.log(tarefa);
 
     $.ajax({
@@ -37,9 +37,7 @@ function Criar(){
         data: {txt: tarefa},
         success: function(result){
             if (result == 1){
-                tarefa = nome_tarefa + " Dia: (" + data + ")";
-
-                alert("Tarefa Adicionada com sucesso!")
+                tarefa = nome_tarefa + " " + data;
                 showData();
                 totalTask();
             } else {
@@ -48,6 +46,7 @@ function Criar(){
         }
     })
 }
+
 
 $(document).on("click", "#delete", function(event){
     event.preventDefault(); // Evita o comportamento padrão do link
@@ -104,7 +103,6 @@ $(document).on("click", ".edit", function(event){
             success: function(result){
                 console.log(result); // Adicione esta linha para depurar
                 if (result === 'success'){
-                    alert('Tarefa atualizada com sucesso!');
                     taskTextElement.text(newTaskText);
                     showData(); // Atualiza a lista de tarefas
                     totalTask();

@@ -37,7 +37,7 @@ if (mysqli_num_rows($result) > 0) {
                 data: { id: taskId, txt: taskText },
                 success: function(result) {
                     if (result === 'success') {
-                        console.log('Tarefa atualizada com sucesso!');
+                        
                     } else {
                         console.log('Erro ao atualizar a tarefa');
                     }
