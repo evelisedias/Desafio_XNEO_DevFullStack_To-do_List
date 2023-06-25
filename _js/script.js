@@ -40,8 +40,11 @@ function Criar(){
                 tarefa = nome_tarefa + " " + data;
                 showData();
                 totalTask();
+                console.log(result);
+                alert("Tarefa criada com sucesso.");
             } else {
                 console.log(result);
+                alert("erro ao criar tarefa.");
             }
         }
     })
