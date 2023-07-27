@@ -1,5 +1,5 @@
 :root {
-    --azul: #03114f;
+    --sidebar: #03114f;
     --branco: #ffff;
     --cinza: #1c1b1b00;
   }
@@ -7,27 +7,26 @@
   * {
     margin: 0;
     padding: 0;
-    
   }
   
   body {
-    background-image: url(https://img.freepik.com/fotos-premium/fondo-papel-color-azul-claro-forma-geometrica-abstracta_206881-863.jpg);
+    background-image: url(_img/background.png);
     background-size: 220vh;
     background-repeat: no-repeat;
-    
-    
+
   }
   
 /* Barra lateral */
 
   
   .logo {
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 50px;
-    color: var(--branco);
+    color: var(--sidebar);
     font-family: Arial, Helvetica, sans-serif;
   }
   
+
   h3 {
     padding: 10px;
   }
@@ -70,17 +69,36 @@
     flex-direction: column;
     position: absolute;
     margin-left: 900px;
-    top: 10px;
     
 
     font-family: Arial, sans-serif;
     font-size: 26px;
     text-align: center;
 
-    background-color: var(--azul);
+    background-color: var(--sidebar);
     color: var(--branco);
     border: 5px solid #f7f7f7;
     border-radius: 5px;
     padding: 4px 12px;
   }
   
+.planejado{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-left: 750px;
+  top: 120px;
+  background-color: var(--branco);
+  width: 350px;
+  height: 80vh;
+  border-radius: 5px;
+
+
+}
+
+.planejado h3{
+  color: #03114f;
+  margin-left: 70px;
+  margin-top: 10px;
+  font-family: 'arial';
+}
