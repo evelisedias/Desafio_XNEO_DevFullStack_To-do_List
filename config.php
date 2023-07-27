@@ -1,10 +1,10 @@
 <?php
 
 //Conectando com o banco de dados
-$host = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'todo_list';
+$host = 'localhost'; 
+$username = 'dias'; 
+$password = 'O$ucessoetreinavel@01'; 
+$database = 'todo_list'; 
 
 // Estabelece a conexão
 $conn = mysqli_connect($host, $username, $password, $database);
